@@ -10,7 +10,7 @@ function nextQuestion() {
     const isQuestionOver = (quizQuestions.length - 1) === currentQuestion;
     if (isQuestionOver) {
         // TODO
-        console.log('Game is over!!!!!');
+        console.log('You Lost...');
         displayResult();
     } else {
         currentQuestion++;
@@ -74,12 +74,12 @@ $(document).on('click', '.choice', function() {
 
     if (correctAnswer === selectedAnswer) {
         score++;
-        console.log('Winsss!!!!');
+        console.log('You Win!');
         preloadImage('win');
         setTimeout(nextQuestion, 3 * 1000);
     } else {
         lost++;
-        console.log('Lost!!!!');
+        console.log('You Lost...');
         preloadImage('lost');
         setTimeout(nextQuestion, 3 * 1000);
     }
